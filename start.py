@@ -1,11 +1,9 @@
 from os import path
 import pynput
 import os
-import re
 import pygetwindow as gw
 import time
 import random
-import numpy
 import ctypes  # An included library with Python install.
 import clipboard
 from pynput.keyboard import Key, Controller
@@ -64,7 +62,7 @@ def main():
             keyboard.release(Key.up)
         if move.strip() in "down" and move.strip() != "":
             keyboard.press(Key.down)
-            time.sleep(random.choice(numerator) /random.choice(denominator) /2)
+            time.sleep(random.choice(numerator) /random.choice(denominator) /3)
             keyboard.release(Key.down)
         if move.strip() in "right" and move.strip() != "":
             keyboard.press(Key.right)
@@ -72,9 +70,9 @@ def main():
             keyboard.release(Key.right)
         if move.strip() in "left" and move.strip() != "":
             keyboard.press(Key.left)
-            time.sleep(random.choice(numerator) /random.choice(denominator) /2)
+            time.sleep(random.choice(numerator) /random.choice(denominator) /3)
             keyboard.release(Key.left)
-        time.sleep(random.random() / 13)  # time between inputs
+        time.sleep(random.random() / 35)  # time between inputs
 
 if __name__ == "__main__":
     main()
